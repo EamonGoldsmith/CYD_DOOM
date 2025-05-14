@@ -1,13 +1,14 @@
-#pragma once
+#ifndef HARDWARE_H_
+#define HARDWARE_H_
 
-#define LCD_H_RES          240
-#define LCD_V_RES          320
+#define LCD_H_RES          320
+#define LCD_V_RES          240
 #define LCD_BITS_PIXEL     16
-#define LCD_BUF_LINES      30
+#define LCD_BUF_LINES      120
 #define LCD_DOUBLE_BUFFER  1
 #define LCD_DRAWBUF_SIZE   (LCD_H_RES * LCD_BUF_LINES)
-#define LCD_MIRROR_X       (true)
-#define LCD_MIRROR_Y       (false)
+#define LCD_MIRROR_X       (false)
+#define LCD_MIRROR_Y       (true)
 
 #define LCD_PIXEL_CLOCK_HZ (40 * 1000 * 1000)
 #define LCD_CMD_BITS       (8)
@@ -40,3 +41,5 @@
 #define TOUCH_DC       (gpio_num_t) GPIO_NUM_NC
 #define TOUCH_RST      (gpio_num_t) GPIO_NUM_NC
 #define TOUCH_IRQ      (gpio_num_t) GPIO_NUM_36
+
+#endif
